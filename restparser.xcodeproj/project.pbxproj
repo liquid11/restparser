@@ -13,6 +13,8 @@
 		C514BE661B2F215200655F88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C514BE651B2F215200655F88 /* Images.xcassets */; };
 		C514BE691B2F215200655F88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514BE671B2F215200655F88 /* LaunchScreen.xib */; };
 		C514BE751B2F215200655F88 /* restparserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514BE741B2F215200655F88 /* restparserTests.swift */; };
+		C514BE7F1B2F239200655F88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C514BE7E1B2F239200655F88 /* Podfile */; };
+		EECA388B2F6F1AF6972A0D72 /* Pods_restparser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B07DCE721E984100B2FA13 /* Pods_restparser.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B07DCE721E984100B2FA13 /* Pods_restparser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_restparser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9D8EE320C0E6C1274978BF /* Pods-restparser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restparser.release.xcconfig"; path = "Pods/Target Support Files/Pods-restparser/Pods-restparser.release.xcconfig"; sourceTree = "<group>"; };
 		C514BE591B2F215100655F88 /* restparser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restparser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C514BE5D1B2F215200655F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C514BE5E1B2F215200655F88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		C514BE6E1B2F215200655F88 /* restparserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = restparserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C514BE731B2F215200655F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C514BE741B2F215200655F88 /* restparserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restparserTests.swift; sourceTree = "<group>"; };
+		C514BE7E1B2F239200655F88 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C58E6F761B30789F00CECA63 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods-restparser/Alamofire.framework"; sourceTree = "<group>"; };
+		C58E6F781B3078A200CECA63 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-restparser/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		C8228D7D80264A1E529E8DB9 /* Pods-restparser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restparser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-restparser/Pods-restparser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECA388B2F6F1AF6972A0D72 /* Pods_restparser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67FEC7223CA773EFBC8BAE1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C58E6F781B3078A200CECA63 /* SwiftyJSON.framework */,
+				C58E6F761B30789F00CECA63 /* Alamofire.framework */,
+				02B07DCE721E984100B2FA13 /* Pods_restparser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90517550C6B1258F197E2343 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8228D7D80264A1E529E8DB9 /* Pods-restparser.debug.xcconfig */,
+				6D9D8EE320C0E6C1274978BF /* Pods-restparser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C514BE501B2F215100655F88 = {
 			isa = PBXGroup;
 			children = (
+				C514BE7E1B2F239200655F88 /* Podfile */,
 				C514BE5B1B2F215100655F88 /* restparser */,
 				C514BE711B2F215200655F88 /* restparserTests */,
 				C514BE5A1B2F215100655F88 /* Products */,
+				90517550C6B1258F197E2343 /* Pods */,
+				67FEC7223CA773EFBC8BAE1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C514BE781B2F215200655F88 /* Build configuration list for PBXNativeTarget "restparser" */;
 			buildPhases = (
+				B0158F67D8B8B700D2665FC4 /* Check Pods Manifest.lock */,
 				C514BE551B2F215100655F88 /* Sources */,
 				C514BE561B2F215100655F88 /* Frameworks */,
 				C514BE571B2F215100655F88 /* Resources */,
+				328BE3D24B6670D849C2856E /* Embed Pods Frameworks */,
+				9C52F706B9B42204C3EBD5EA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +228,7 @@
 			files = (
 				C514BE641B2F215200655F88 /* Main.storyboard in Resources */,
 				C514BE691B2F215200655F88 /* LaunchScreen.xib in Resources */,
+				C514BE7F1B2F239200655F88 /* Podfile in Resources */,
 				C514BE661B2F215200655F88 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +241,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		328BE3D24B6670D849C2856E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-restparser/Pods-restparser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C52F706B9B42204C3EBD5EA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-restparser/Pods-restparser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0158F67D8B8B700D2665FC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C514BE551B2F215100655F88 /* Sources */ = {
@@ -334,8 +417,13 @@
 		};
 		C514BE791B2F215200655F88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8228D7D80264A1E529E8DB9 /* Pods-restparser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-restparser",
+				);
 				INFOPLIST_FILE = restparser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -344,8 +432,13 @@
 		};
 		C514BE7A1B2F215200655F88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D9D8EE320C0E6C1274978BF /* Pods-restparser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-restparser",
+				);
 				INFOPLIST_FILE = restparser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +498,7 @@
 				C514BE7A1B2F215200655F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C514BE7B1B2F215200655F88 /* Build configuration list for PBXNativeTarget "restparserTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +507,7 @@
 				C514BE7D1B2F215200655F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
