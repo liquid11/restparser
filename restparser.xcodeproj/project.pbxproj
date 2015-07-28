@@ -14,6 +14,7 @@
 		C514BE691B2F215200655F88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C514BE671B2F215200655F88 /* LaunchScreen.xib */; };
 		C514BE751B2F215200655F88 /* restparserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C514BE741B2F215200655F88 /* restparserTests.swift */; };
 		C514BE7F1B2F239200655F88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C514BE7E1B2F239200655F88 /* Podfile */; };
+		C5356CDC1B66AB28006C89C0 /* restModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5356CDB1B66AB28006C89C0 /* restModel.swift */; };
 		EECA388B2F6F1AF6972A0D72 /* Pods_restparser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B07DCE721E984100B2FA13 /* Pods_restparser.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		C514BE731B2F215200655F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C514BE741B2F215200655F88 /* restparserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restparserTests.swift; sourceTree = "<group>"; };
 		C514BE7E1B2F239200655F88 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C5356CDB1B66AB28006C89C0 /* restModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restModel.swift; sourceTree = "<group>"; };
 		C58E6F761B30789F00CECA63 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods-restparser/Alamofire.framework"; sourceTree = "<group>"; };
 		C58E6F781B3078A200CECA63 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/Pods-restparser/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		C8228D7D80264A1E529E8DB9 /* Pods-restparser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-restparser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-restparser/Pods-restparser.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				C514BE651B2F215200655F88 /* Images.xcassets */,
 				C514BE671B2F215200655F88 /* LaunchScreen.xib */,
 				C514BE5C1B2F215200655F88 /* Supporting Files */,
+				C5356CDB1B66AB28006C89C0 /* restModel.swift */,
 			);
 			path = restparser;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5356CDC1B66AB28006C89C0 /* restModel.swift in Sources */,
 				C514BE611B2F215200655F88 /* ViewController.swift in Sources */,
 				C514BE5F1B2F215200655F88 /* AppDelegate.swift in Sources */,
 			);

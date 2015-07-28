@@ -8,15 +8,47 @@
 
 import UIKit
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+   
+    var items = [RestItm]()
+ 
+
+    
+    var photos: [String] = ["Eggs", "Milk"]
+    
     @IBOutlet var tblView: UITableView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-    }
+        super.viewDidLoad()
+        var url = "http://jsonplaceholder.typicode.com/posts"
+        Alamofire.request(.GET, url, parameters: nil)
+            .responseJSON { (req, res, json, error) in
+                if(error != nil) {
+                    NSLog("Error: \(error)")
+                    println(req)
+                    println(res)
+                }
+                else {
+                    NSLog("Success: \(url)")
+                    var json = JSON(json!)
+                    
+                    if let data : Dictionary<String, JSON> = json[].dictionaryValue as Dictionary? {
+                    for (key: String, subJson: JSON) in data {
+                
+                       
+                            println(subJson)
+                        
+
+                    
+                        }
+                    }
+                }
+        }    }
     
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
      
@@ -25,33 +57,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 5
+        return 2
     }
     
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
         
-        var photocell = photos[indexPath.row]
         
-        cell.textLabel?.text = photocell.name
+        
+        cell.textLabel?.text = photos[indexPath.row]
         
         return cell
     }
-    
-    
-      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        var secondViewController  = segue.destinationViewController as DisplayViewController
-        if let indexPath = self.tableView.indexPathForSelectedRow(){
-            
-            let selectedPhoto = photos[indexPath.row]
-            secondViewController.currentPhoto = selectedPhoto
-            
-        }
-        
-    }
-    
     
     
     
